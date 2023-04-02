@@ -1,0 +1,263 @@
+.home-gallery {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  min-height: 1000px;
+
+  @include tablet {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  @include desktop {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.news {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+
+  @include tablet {
+    gap: 30px;
+  }
+
+  @include desktop {
+    gap: 40px 31px;
+  }
+}
+
+.list-news {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+
+  @include tablet {
+    gap: 30px;
+  }
+
+  @include desktop {
+    gap: 40px 31px;
+  }
+}
+
+.new__card {
+  height: 630px;
+
+  @include tablet {
+    width: 353px;
+    height: 675px;
+  }
+
+  @include desktop {
+    width: 395px;
+    height: 675px;
+  }
+
+
+}
+
+.new__img {
+  max-width: 288px;
+  height: 395px;
+  border-radius: 4px;
+  object-fit: cover;
+  margin-bottom: 20px;
+
+  @include tablet {
+    max-width: 353px;
+  }
+
+  @include desktop {
+    max-width: 395px;
+  }
+}
+
+.box {
+  display: block;
+  opacity: 1;
+  position: relative;
+
+}
+
+.news__category {
+
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 112px;
+  height: auto;
+  padding: 4px 8px;
+  margin: 0;
+  left: 0px;
+  top: 40px;
+  border-radius: 0px 4px 4px 0px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  background-color: var(--blue--translucent);
+  color: var(--color-btn-white);
+
+}
+
+.news__addbtn {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  border-radius: 20px;
+  border: none;
+  max-height: 28px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  padding: 6px 12px;
+  cursor: url(../images/touch.svg), pointer;
+  background-color: var(--color-btn-white);
+  color: var(--text-color);
+}
+
+.news__removebtn {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  border-radius: 20px;
+  border: none;
+  max-height: 28px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 6px 12px;
+  cursor: url(../images/touch.svg), pointer;
+  background-color: var(--color-btn-white);
+  color: var(--text-color);
+
+
+}
+
+
+
+.news__title {
+  height: 99px;
+  margin-bottom: 20px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.38;
+  letter-spacing: -0.01em;
+  color: var(---text-color);
+  overflow: hidden;
+
+  @include tablet {
+    font-size: 32px;
+    height: 132px;
+  }
+
+}
+
+.news__text {
+  margin-bottom: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.36;
+  height: 57px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+  overflow: hidden;
+
+
+  @include tablet {
+    height: 66px;
+  }
+}
+
+.news__details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news__date {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.36;
+  text-align: right;
+  color: var(--additional-text-color);
+
+  @include tablet {
+    font-size: 16px;
+  }
+}
+
+.news__link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.36;
+  color: var(--secondary-text-color);
+  cursor: url(../images/touch.svg), pointer;
+  @include tablet {
+    font-size: 16px;
+  }
+
+}
+
+.news__heart-icon {
+  stroke: var(--color-active-btn);
+  fill: var(--color-btn-white);
+}
+
+.news__fiilheart-icon {
+  fill: var(--markercolor);
+}
+
+.is-read {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.36;
+  opacity: 1;
+  z-index: 2;
+  padding: 4px 8px;
+  position: absolute;
+  color: var(--green-text);
+  position: absolute;
+  top: 20px;
+  right: 15px;
+
+  &::after {
+    content: ' ';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url('/src/images/icon-read.svg');
+    background-repeat: no-repeat;
+    background-position-y: 6px;
+    margin-left: 6px;
+
+
+  }
+}
+
+.overlay {
+  opacity: .6;
+  border-radius: 4px;
+}
+
+.dark {
+  & .news__text {
+    color: var(--text-color-dark-theme);
+  }
+  & .news__link{
+    cursor: url(../images/touch-white.svg), pointer;
+  }
+}
+
+

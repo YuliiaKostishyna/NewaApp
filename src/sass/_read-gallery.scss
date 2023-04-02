@@ -1,0 +1,53 @@
+.read-gallery {
+  min-height: 600px;
+
+  padding-bottom: 60px;
+  padding-top: 40px;
+  @include tablet {
+    padding-bottom: 100px;
+    padding-top: 48px;
+  }
+  @include desktop {
+    padding-bottom: 300px;
+    padding-bottom: 48px;
+  }
+}
+.read-date {
+  color: #111321;
+  border-bottom: 1px solid black;
+  padding-bottom: 12px;
+  
+  margin-bottom: 30px;
+  cursor: url(../images/touch.svg), pointer;
+
+  @include tablet {
+    padding-top: 48px;
+  }
+  @include desktop {
+    padding-bottom: 48px;
+  }
+
+  &::after {
+    content: '\25BC';
+    margin-left: 8px;
+  }
+
+  &.arrow-change::after {
+    content: '\25B2';
+    margin-left: 8px;
+  }
+}
+.dark{
+  .read-date{
+    color: var(--text-color-dark-theme);
+    border-bottom: 1px solid var(--text-color-dark-theme);
+    cursor: url(../images/touch-white.svg), pointer;
+  }
+}
+// .read-date.arrow-change {
+//   &.aa::after {
+//     content: '\25B2';
+//     margin-left: 8px;
+//   }
+// }
+
